@@ -1,18 +1,37 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+<template lang="pug">
+  v-container.home(class="d-flex")
+      list-items(:data="clientes")
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import listItems from "@/components/listItems.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
-  }
+    listItems,
+  },
+  data: function() {
+    return {
+      clientes: [
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+        { nombre: "Juan Martinez", telefono: "3213213455" },
+      ],
+    };
+  },
 };
 </script>
